@@ -1,4 +1,4 @@
-const targetUrl = "https://assemblyscript.org/"
+const targetUrl = "https://www.assemblyscript.org/"
 
 const redirects = {
   'index': '',
@@ -41,9 +41,13 @@ const template = `<!DOCTYPE html>
   <head>
     <meta charset="utf-8" />
     <title>Redirecting to %URL%</title>
+    <link rel="canonical" href="%URL%" />
     <meta http-equiv="refresh" content="0; URL=%URL%" />
   </head>
-  <link rel="canonical" href="%URL%" />
+  <body>
+    <h1>This page has moved</h1>
+    <p>If you are not being redirected, <a href="%URL%">click here</a>.</p>
+  </body>
 </html>
 `
 
